@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: "Set environmental variables"
         run: |
           echo "CTAC_LIBRARY_ID=4xR0aydMQb6s33qVGMELeg" >> $GITHUB_ENV
