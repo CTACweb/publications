@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
       - name: "Set environmental variables"
         run: |
-          echo "CTAC_LIBRARY_ID=4xR0aydMQb6s33qVGMELeg >> $GITHUB_ENV
+          echo "CTAC_LIBRARY_ID=4xR0aydMQb6s33qVGMELeg" >> $GITHUB_ENV
       - name: Generate web page
         run: |
           ./publications.pl ${{ secrets.NASA_ADS_API_TOKEN }} ${CTAC_LIBRARY_ID} ./CTACers.xml
