@@ -19,7 +19,7 @@ jobs:
       - name: Install tools
         run: |
           sudo apt -y update
-          sudo apt install -y libxml-simple-perl libwww-curl-perl libjson-pp-perl libscalar-util-perl
+          sudo apt install -y libxml-simple-perl libwww-curl-perl libjson-pp-perl
       - name: Generate web page
         run: |
           ./publications.pl ${{ secrets.NASA_ADS_API_TOKEN }} ${CTAC_LIBRARY_ID} ./CTACers.xml
