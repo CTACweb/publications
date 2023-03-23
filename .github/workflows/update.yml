@@ -10,6 +10,9 @@ defaults:
 jobs:
   Update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
@@ -25,7 +28,7 @@ jobs:
       - name: Generate web page
         run: |
           ./publications.pl ${{ secrets.NASA_ADS_API_TOKEN }} ${CTAC_LIBRARY_ID} ./CTACers.xml
-      - name: Push udpates
+      - name: Push updates
         run: |
           git checkout gh-pages
           git config --local user.email "github@users.noreply.github.com"
