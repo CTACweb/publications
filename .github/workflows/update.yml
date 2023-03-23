@@ -1,0 +1,30 @@
+name: 'Update'
+on:
+  workflow_dispatch:
+  push:
+  schedule:
+    - cron: '07 03 * * 1'
+defaults:
+  run:
+    shell: bash
+jobs:
+  Update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: "Set environmental variables"
+        run: |
+          echo "CTAC_LIBRARY_ID=4xR0aydMQb6s33qVGMELeg >> $GITHUB_ENV
+      - name: Generate web page
+        run: |
+          ./publications.pl ${{ secrets.NASA_ADS_API_TOKEN }} ${CTAC_LIBRARY_ID} ./CTACers.xml
+      - name: Push udpates
+        run: |
+          git checkout gh-pages
+          git config --local user.email "github@users.noreply.github.com"
+          git config --local user.name "github-action-validate"
+          git add publications.html
+          git commit -m "Update publications"
+          git push --set-upstream origin gh-pages
+          git checkout -
