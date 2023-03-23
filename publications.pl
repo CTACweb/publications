@@ -4,7 +4,6 @@ use warnings;
 use XML::Simple;
 use WWW::Curl::Easy;
 use JSON::PP qw(encode_json decode_json);
-use Data::Dumper;
 use Scalar::Util qw(reftype);
 
 # Read arguments.

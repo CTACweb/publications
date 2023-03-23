@@ -16,6 +16,10 @@ jobs:
       - name: "Set environmental variables"
         run: |
           echo "CTAC_LIBRARY_ID=4xR0aydMQb6s33qVGMELeg" >> $GITHUB_ENV
+      - name: Install tools
+        run: |
+          sudo apt -y update
+          sudo apt install -y libxml-simple-perl libwww-curl-perl libjson-pp-perl libscalar-util-perl
       - name: Generate web page
         run: |
           ./publications.pl ${{ secrets.NASA_ADS_API_TOKEN }} ${CTAC_LIBRARY_ID} ./CTACers.xml
