@@ -265,7 +265,7 @@ print $webPage "<td><a href=\"https://ctac.carnegiescience.edu/\" class=\"menu\"
 print $webPage "<td><a href=\"https://ctac.carnegiescience.edu/overview\" class=\"menu\"/>About</a></td>\n";
 print $webPage "<td><a href=\"https://ctac.carnegiescience.edu/publications\" class=\"menuself\"/>Publications</a></td>\n";
 print $webPage "<td><a href=\"https://ctac.carnegiescience.edu/members-list\" class=\"menu\"/>People</a></td>\n";
-print $webPage "<td><a href=\"https://ctac.carnegiescience.edu/\" class=\"menu\"/>Events</a></td>\n";
+#print $webPage "<td><a href=\"https://ctac.carnegiescience.edu/\" class=\"menu\"/>Events</a></td>\n";
 print $webPage "<td><a href=\"https://ctac.carnegiescience.edu/opportunities\" class=\"menu\"/>Opportunities</a></td>\n";
 print $webPage "</tr>\n";
 print $webPage "</table>\n";
