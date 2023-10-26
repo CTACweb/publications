@@ -344,7 +344,7 @@ print $webPage "  </colgroup>\n";
 	}
 	$includePrevious = $include;
     }
-    print $webPage "<tr class=\"firstLine\"><td><h3 class=\"title\"><a href=\"https://ui.adsabs.harvard.edu/abs/".$publication->{'bibcode'}."abstract\">".$publication->{'title'}->[0]."</a></h3><span class=\"author\">".$authors."</span></td><td><span class\"date\">".$dateFormatted."</span><br><span class=\"journal\">".$publication->{'pub'}."</span></td></tr>\n";
+    print $webPage "<tr class=\"firstLine\"><td><h3 class=\"title\"><a href=\"https://ui.adsabs.harvard.edu/abs/".$publication->{'bibcode'}."/abstract\">".$publication->{'title'}->[0]."</a></h3><span class=\"author\">".$authors."</span></td><td><span class\"date\">".$dateFormatted."</span><br><span class=\"journal\">".$publication->{'pub'}."</span></td></tr>\n";
 }
 print $webPage "</table>\n";
 print $webPage "</div>\n";
