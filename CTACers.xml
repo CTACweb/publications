@@ -22,7 +22,7 @@
 
   <ctacer nameLast="Delos" initial="M" url=""/>
   <ctacer nameLast="Kim" initial="S" url=""/>
-  <ctacer nameLast="Johnson" initial="J" url=""/>
+  <ctacer nameLast="Johnson" initial="J" notName="Jennifer" url=""/>
 
   <ctacer nameLast="Cox" initial="T"/>
   <ctacer nameLast="de Mink" initial="S" url="https://www.selmademink.com/"/>

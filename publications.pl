@@ -301,9 +301,11 @@ print $webPage "  </colgroup>\n";
 	$author->{'isCTAC'} = 0;
 	foreach my $person ( @{$config->{'ctacer'}} ) {
 	    if ( $author->{'name'} =~ m/^$person->{'nameLast'},\s$person->{'initial'}/ ) {
-		$author->{'isCTAC'} = 1;
-		$author->{'url'} = $person->{'url'}
-		    if ( exists($person->{'url'}) );
+		unless ( exists($person->{'notName'}) && $author->{'name'} =~ m/^$person->{'nameLast'},\s$person->{'notName'}/ ) {
+		    $author->{'isCTAC'} = 1;
+		    $author->{'url'} = $person->{'url'}
+		        if ( exists($person->{'url'}) );
+		}
 	    }
 	}
     }
