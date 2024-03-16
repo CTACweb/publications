@@ -36,7 +36,7 @@ jobs:
           git config --local user.name "github-action-validate"
           mv publicationsNew.html publications.html
           git add publications.html
-          if [ `git status --porcelain --untracked-files=all | grep '^[A|M|D|R]'` ]; then
+          if [[ `git status --porcelain --untracked-files=all | grep '^[A|M|D|R]'` ]]; then
            git commit -m "Update publications"
            git push --set-upstream origin gh-pages
            git checkout -
