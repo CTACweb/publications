@@ -20,9 +20,12 @@
   <ctacer nameLast="Tokadjian" initial="A" url="https://ctac.carnegiescience.edu/armen-tokadjian"/>
   <ctacer nameLast="Götberg" initial="Y" url="https://ist.ac.at/en/research/gotberg-group/"/>
   <ctacer nameLast="Kim" initial="S" url="https://ctac.carnegiescience.edu/stacy-kim"/>
+  <ctacer nameLast="Johnson" initial="J" notName="Jennifer" url="https://ctac.carnegiescience.edu/james-johnson"/>
+  <ctacer nameLast="Wu" initial="S" url="https://ctac.carnegiescience.edu/samantha-wu"/>
+  <ctacer nameLast="Robertson" initial="A" url="https://ctac.carnegiescience.edu/andrew-robertson"/>
 
   <ctacer nameLast="Delos" initial="M" url=""/>
-  <ctacer nameLast="Johnson" initial="J" notName="Jennifer" url=""/>
+  <ctacer nameLast="Weatherford" initial="N" url=""/>
 
   <ctacer nameLast="Cox" initial="T"/>
   <ctacer nameLast="de Mink" initial="S" url="https://www.selmademink.com/"/>
