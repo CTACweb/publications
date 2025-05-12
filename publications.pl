@@ -23,7 +23,7 @@ my $config = $xml->XMLin($configFile);
 # Construct a curl object.
 my $curl = WWW::Curl::Easy->new();
 $curl->setopt(CURLOPT_HEADER,1);
-$curl->setopt(CURLOPT_HTTPHEADER, ['Authorization: Bearer:'.$apiToken]);
+$curl->setopt(CURLOPT_HTTPHEADER, ['Authorization: Bearer '.$apiToken]);
 
 # Retrieve library information.
 my $libraryMetaData;
@@ -93,7 +93,7 @@ my @libraryRecordIdentifiers;
 my $records;
 {
     $curl->setopt(CURLOPT_URL, 'https://api.adsabs.harvard.edu/v1/search/bigquery?q=*:*&rows='.$countRecords.'&fl=bibcode,title,author,date,pub');
-    $curl->setopt(CURLOPT_HTTPHEADER, ['Authorization: Bearer:'.$apiToken,"Content-Type: big-query/csv"]);
+    $curl->setopt(CURLOPT_HTTPHEADER, ['Authorization: Bearer '.$apiToken,"Content-Type: big-query/csv"]);
     my $response_body;
     $curl->setopt(CURLOPT_WRITEDATA,\$response_body);
     $curl->setopt(CURLOPT_POST, 1);
